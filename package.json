@@ -1,0 +1,22 @@
+{
+  "name": "my-projects",
+  "version": "1.0.0",
+  "description": "Contains various projects in form of a website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giteshh/GoodProjects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giteshh/GoodProjects/issues"
+  },
+  "homepage": "https://github.com/giteshh/GoodProjects#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
