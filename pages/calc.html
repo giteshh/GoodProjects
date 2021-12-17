@@ -1,0 +1,137 @@
+
+  <!-- for live reload -->
+  <script type="text/javascript" src="https://livejs.com/live.js"></script>
+
+
+  <h2>Simple Calculator</h2>
+
+  <input type="number" value="12" id="n1"> <br>
+  <input type="number" value="23" id="n2"> <br>  
+  <button onclick="plus()">+</button>
+  <button onclick="minus()">-</button>
+  <button onclick="multiply()">*</button>
+  <button onclick="div()">/</button>
+  <br>
+  <input type="number" id="r">
+
+  <script>
+      let n1 = document.getElementById('n1');
+      // let n2 = document.getElementById('n2');
+      // n1.value = 34;
+      // n2.value = 23;
+      // console.log(n1.value);
+      function plus(){
+        let r = document.getElementById('r');
+        r.value = parseFloat(n1.value) + parseFloat(n2.value) ;
+        // console.log(n1); // <input...
+        // console.log(n1.value);    // "12" 
+        // console.log(parseFloat(n1)); // 12.0
+        // console.log(parseInt(n1)); // 12
+        // console.log(typeof(n1)); // Element
+        // console.log(typeof(n1.value)); // string
+        // console.log(typeof(parseFloat(n1.value))); //number float
+        // console.log(typeof(parseInt(n1.value))); //number int
+       
+      }
+      function minus(){
+        let r = document.getElementById('r');
+        r.value = parseFloat(n1.value) - parseFloat(n2.value);
+      }
+
+      function multiply(){
+        let r = document.getElementById('r');
+        r.value = parseFloat(n1.value) * parseFloat(n2.value);
+      }
+       
+      function div(){
+        let r = document.getElementById('r');
+        r.value = parseFloat(n1.value) / parseFloat(n2.value);
+      }
+  </script>
+
+<hr>
+   
+<hr>
+
+  <h4>Button Advance Calculator</h4>
+
+    <form name="mat" action="calc.html">
+      <input type=text id="input" name="input"> 
+    </form> 
+    
+    <table style="width: 10%;">
+    <tr>
+      <td><button onclick="insert(7)">7</button></td>
+      <td><button onclick="insert(8)">8</button></td>
+      <td><button onclick="insert(9)">9</button></td>
+      <td><button onclick="operation()">/</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="insert(4)">4</button></td>
+      <td><button onclick="insert(5)">5</button></td>
+      <td><button onclick="insert(6)">6</button></td>
+      <td><button onclick="operation()">*</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="insert(1)">1</button></td>
+      <td><button onclick="insert(2)">2</button></td>
+      <td><button onclick="insert(3)">3</button></td>
+      <td><button onclick="operation()">-</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="insert()">.</button></td>
+      <td><button onclick="insert(0)">0</button></td>
+      <td><button onclick="operation()">+</button></td>
+      <td onclick="result()"><button>=</button></td>
+    </tr>
+  </table>
+
+  <script>
+   
+   function insert(num){
+     document.mat.input.value = document.mat.input.value + num;
+   }
+
+   function result(){
+     var x = document.mat.input.value;
+     
+   }
+
+     function operation(){
+      //  if(operation == +){
+      //    x = a + b;
+      //  } 
+     }
+   
+  </script>
+
+
+  <hr>
+
+
+  <h4> Scienctific Calc</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

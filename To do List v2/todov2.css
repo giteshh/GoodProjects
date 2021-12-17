@@ -12,15 +12,15 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-/* header{
+header{
     font-size: 1.5rem;
 }
 
 header, form{
     min-height: 20vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
 }
 
 form input, form button{
@@ -28,8 +28,10 @@ form input, form button{
     font-size: 2rem;
     border: none;
     background: white;
-} */
- /* form input{
+    justify-items: center;
+    align-content: center;
+} 
+  form input{
     padding: 0.5rem;
     font-size: 1rem;
     border: black 1px solid;
@@ -38,12 +40,12 @@ form input, form button{
     width: 300px;
     padding: 0.5rem;
     margin: 1.5rem;
-    border-radius: 20px; */
-/* } */
+    border-radius: 20px; 
+ } 
 
 
 
-/* form{
+form{
     align-items: center;
     display: flex;
     justify-content: center;
@@ -107,4 +109,4 @@ form input, form button{
 .Completed{
     text-decoration: line-through;
     opacity: 0.5;
-}  */ 
+} 

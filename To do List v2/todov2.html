@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="todov2.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todov2.css">    
     <title>To DO List</title>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    
 </head>
 <body>
@@ -23,9 +20,48 @@
         <input type="text" class="todo-input">
         <button class="todo-button btn btn-primary" type="submit">Add Task</button>
     </form>
-    <div class="todo-container">
-        <ul class="todo-list"></ul>
+    <div class="row">
+        <div class="col-md">
+            <div class="todo-container">
+                <ul class="list-group" id='myUl'>
+                    
+                </ul>
+            </div>
+            <!-- <script src="appv2.js"></script> -->
+            <script>                
+                var msgs = ['task 1', 'task3', 'sdlfj'];
+
+                function updateList(msgs){
+                    let str = '';
+                    let i = -1;
+                    for(let msg of msgs){
+                        i += 1;
+                        str += `
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            ${msg}
+                            <span onclick=dlete(${i}) class="badge badge-danger deleteBtn badge-pill">Delete</span>                      
+                            </li>
+                      `;
+                    }                
+                    document.getElementById('myUl').innerHTML = str;
+                }
+
+                updateList(msgs);
+
+                function dlete(n){
+                    let msgArray = msgs;
+                    msgs = msgs.filter( value => {                        
+                        return value != msgArray[n];
+                    });
+                    console.log(msgs);
+                    updateList(msgs);
+                    msgArray = msgs;
+                }
+            </script>
+        </div>
+        <div class="col-md"></div>
+        <div class="col-md"></div>
     </div>
-    <script src="appv2.js"></script>
+   
 </body> 
 </html>
